@@ -1,4 +1,5 @@
 const startButton = document.getElementById('start-btn')
+const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -6,44 +7,107 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click',startGame)
+nextButton.addEventListener('click', ()=> {
+    currentQuestionIndex++
+    setNextQuestion()
+})
 
 function startGame(){
-console.log('started')
 startButton.classList.add('hide')
-shuffledQuestions=questions.sort(()=> Math.random()- .5)
+shuffledQuestions=questions.sort(() => Math.random() - .5)
 currentQuestionIndex = 0
 questionContainerElement.classList.remove('hide')
 setNextQuestion()
 }
 
 function setNextQuestion(){
-showQuestion(shuffledQuestions[currentQuestionIndex])
+    resetState()
+    showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
 function showQuestion(question){
-questionElement.innerText = question.question
-question.answers.ForEach(answer => {
-    const buttton = document.createElement('button')
-    buttton.innerText = answer.text
-    buttton.classList.add('btn')
-    if (answer.correct){
-        buttton.dataset.correct = answer.correct
-    }
-    buttton.addEventListener('click', selectAnswer)
-    answerButtonsElement.appendChild(buttton)
-})
+    questionElement.innerText = question.question
+    question.answers.forEach(answer => {
+        const button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('btn')
+        if (answer.correct){
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', selectAnswer)
+        answerButtonsElement.appendChild(button)
+    })
 }
 
-function selectAnswer(){
+function resetState(){
+    clearStatusClass(document.body)
+    nextButton.classList.add('hide')
+    while(answerButtonsElement.firstChild){
+        answerButtonsElement.removeChild
+        (answerButtonsElement.firstChild)
+    }
+}
 
+function selectAnswer(e){
+    const selectedButton = e.target
+    const correct = selectedButton.dataset.correct
+    setStatusClass(document.body, correct)
+    Array.from(answerButtonsElement.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    })
+    if (shuffledQuestions.length > currentQuestionIndex +1){
+        nextButton.classList.remove('hide')
+    } else {
+        startButton.innerText = 'Restart'
+        startButton.classList.remove('hide')
+    }
+}
+
+function setStatusClass(element, correct){
+    clearStatusClass(element)
+    if(correct) {
+        element.classList.add('correct')
+    } else {
+        element.classList.add('wrong')
+    }
+}
+
+function clearStatusClass(element){
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
 }
 
 const questions = [
     {
-        question: 'vad är 2+2?',
+        question: 'Vilken är den bästa gruppen?',
         answers: [
-            { text: '4', correct: true },
-            {text: '22', correct: false}
+            { text: 'vi', correct: true },
+            { text: 'någon annan grupp', correct: false}
         ]
-    }
+    },{
+        question: 'vem är bäst på att dricka sprit?',
+        answers: [
+          { text: 'Oscar', correct: true },
+          { text: 'Jonas', correct: true },
+          { text: 'Oscar2', correct: true },
+          { text: 'Hala', correct: true },
+          { text: 'Max', correct: true },
+          { text: 'Christoffer', correct: true },
+          { text: 'Calle', correct: true }
+        ]
+      },{
+        question: 'Vem blev årets nolla?',
+        answers: [
+          { text: 'Calle', correct: true },
+          { text: 'Oscar', correct: false },
+          { text: 'någon annan', correct: false }
+        ]
+      },{
+        question: 'Vem drack josagrogg i fredags?',
+        answers: [
+          { text: 'Oscar', correct: true },
+          { text: 'Oscar2', correct: true},
+          { text: 'någon annan i gruppen', correct: false}
+        ]
+      }
 ]
