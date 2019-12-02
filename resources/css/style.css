@@ -23,25 +23,60 @@ body {
   font-size: 10rem;
   font-family: Merriweather+Sans;
   font-weight: 800;
+  color: white;
 }
 
 .main-content h2 {
   font-size: 1.75rem;
   font-family: Merriweather+Sans;
   font-weight: bold;
+  color: white;
 }
 
 .main-content h3 {
   font-size: 1.5rem;
+  color: white;
 }
 
 .main-content h4 {
   font-size: 1.2rem
+  color: white;
 }
 
 .main-content p {
   font-size: 4rem;
+  color: white;
 }
+
+.main-content .social {
+  background-color: #2880f3;
+  padding-bottom: 11rem;
+  
+}
+
+
+
+.main-content .ekologisk {
+  background-color: #13e000;
+  padding-bottom: 11rem;
+}
+
+.main-content .ekonomisk {
+  background-color: #e67a00;
+  padding-bottom: 11rem;
+}
+
+.main-content .generell {
+  background-color: #1e3058;
+  padding-bottom: 11rem;
+}
+
+.main-content .huvud {
+  padding-bottom: 11rem;
+  background-color: antiquewhite;
+}
+
+
 
 
 /* Header */
@@ -110,11 +145,6 @@ body {
 
 
 
-.main-content {
-  background-color: antiquewhite;
-  padding-bottom: 11rem;
-}
-
 
 /* för läs sidor */
 
@@ -157,12 +187,21 @@ body {
 .para1 {
   display: flex;
   width: 100%;
-
-  margin-top: 20px;
+  border-bottom: #f2f2f2 solid 20px;
+  align-items: center;
+  
 }
 
 .para1 p {
   font-size: 1rem;
+}
+
+.lefto1 {
+  width: 40%;
+  height: auto;
+  padding: 2rem 1.5rem;
+  
+
 }
 
 .lefto {
@@ -177,10 +216,29 @@ body {
 
 }
 
-.righto {
-  margin-left: 20px;
+.righto1 {
+  padding: 4rem 1.5rem;
+  width: 50%;
+  flex-direction: column;
+  text-align: center;
+  overflow: scroll;
+  
+  
 }
 
+.righto {
+  padding: 2rem 1.5rem;
+  margin-left: 20px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.mittenbild {
+  display: block;
+  width: 60%;
+  margin-left: 20%;
+  text-align: center;
+}
 
 
 
@@ -238,7 +296,17 @@ body {
   text-align: center;
 }
 
-.text a {
+.text1 {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 20px 12px;
+  position: absolute;
+  bottom: 25%;
+  width: 100%;
+  text-align: center;
+}
+
+.text a, .text1 a {
   color: white;
 }
 
