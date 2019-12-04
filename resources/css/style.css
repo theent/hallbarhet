@@ -20,7 +20,7 @@ body {
 }
 
 .main-content h1 {
-  font-size: 10rem;
+  font-size: 5rem;
   font-family: Merriweather+Sans;
   font-weight: 800;
   color: white;
@@ -49,15 +49,15 @@ body {
 }
 
 .main-content .social {
-  background-color: #2880f3;
+  background-color: #388CCE;
   padding-bottom: 11rem;
-  
+
 }
 
 
 
 .main-content .ekologisk {
-  background-color: #13e000;
+  background-color: #1DAA3C;
   padding-bottom: 11rem;
 }
 
@@ -189,7 +189,7 @@ body {
   width: 100%;
   border-bottom: #f2f2f2 solid 20px;
   align-items: center;
-  
+
 }
 
 .para1 p {
@@ -200,13 +200,19 @@ body {
   width: 40%;
   height: auto;
   padding: 2rem 1.5rem;
-  
+  overflow: hidden;
+  float: left;
+
 
 }
 
-.lefto {
+.leftoimg {
+  width: 40%;
+  height: auto;
+  padding: 1rem 1.5rem;
   overflow: hidden;
-  padding: 20px;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .lefto img {
@@ -221,16 +227,23 @@ body {
   width: 50%;
   flex-direction: column;
   text-align: center;
-  overflow: scroll;
-  
-  
+  overflow: hidden;
+  float: right;
+
+
+
 }
 
-.righto {
-  padding: 2rem 1.5rem;
-  margin-left: 20px;
-  text-align: center;
+.rightoimg {
+  padding: 1rem 1.5rem;
+  width: 50%;
   flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: 0;
+
+
 }
 
 .mittenbild {
@@ -369,7 +382,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-  
+
 }
 
 
@@ -391,5 +404,3 @@ flex-direction: column;
 .footer-right span{
   padding-left: 1rem;
 }
-
-
