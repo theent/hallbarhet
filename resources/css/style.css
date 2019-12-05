@@ -199,7 +199,7 @@ body {
 .lefto1 {
   width: 40%;
   height: auto;
-  padding: 2rem 1.5rem;
+  padding: 4rem 1.5rem;
   overflow: hidden;
   float: left;
 
@@ -209,7 +209,7 @@ body {
 .leftoimg {
   width: 40%;
   height: auto;
-  padding: 1rem 1.5rem;
+  padding: 4rem 1.5rem;
   overflow: hidden;
   margin-left: 0;
   margin-right: auto;
@@ -235,7 +235,7 @@ body {
 }
 
 .rightoimg {
-  padding: 1rem 1.5rem;
+  padding: 4rem 1.5rem;
   width: 50%;
   flex-direction: column;
   text-align: center;
