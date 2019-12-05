@@ -1,9 +1,10 @@
 
 /* Universal rules */
-
+@import url('https://fonts.googleapis.com/css?family=Solway|Source+Serif+Pro&display=swap');
 html {
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.4px;
+  font-family: 'Source Serif Pro', 'Solway', 'Helvetica', 'sans-serif';
 }
 
 body {
@@ -15,7 +16,7 @@ body {
   margin: 0 auto;
   position: relative;
   top: 4rem;
-  font-family: sans-serif;
+  font-family: sans-serif
   color: #333333;
 }
 
