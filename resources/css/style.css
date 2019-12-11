@@ -16,7 +16,7 @@ body {
   margin: 0 auto;
   position: relative;
   top: 4rem;
-  font-family: sans-serif
+  font-family: sans-serif;
   color: #333333;
 }
 
@@ -28,7 +28,7 @@ body {
 }
 
 .main-content h2 {
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   font-family: Merriweather+Sans;
   font-weight: bold;
   color: white;
@@ -40,7 +40,7 @@ body {
 }
 
 .main-content h4 {
-  font-size: 1.2rem
+  font-size: 1.2rem;
   color: white;
 }
 
@@ -53,6 +53,9 @@ body {
   background-color: #388CCE;
   padding-bottom: 11rem;
   border-color: #2F77B0;
+
+.main-content .social .para1 {
+  border-color: #1e3058;
 
 }
 
@@ -79,6 +82,8 @@ body {
 .main-content .social {
   border-color: #2F77B0;
 }
+
+
 
 
 
@@ -150,48 +155,26 @@ body {
 
 
 
-/* för läs sidor */
 
-.first{
-  display: flex;
-  width: 100%;
-  align-items: baseline;
-}
-
-.first p {
-  font-size: 1rem;
-}
-
-.first-image {
-  padding: 2rem 1.5rem;
-  width: 60vw;
-  overflow: hidden;
-}
-
-.first-image img{
-  display: block;
-  width: 100%;
-  height: auto;
-
-}
-
-.first-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.first-text #every, #consectetur {
-  padding-bottom: 1.5rem;
-}
 
 
 
 /* paragraf 1 */
 
+#social {
+  padding: 4rem;
+}
+
 .para1 {
   display: flex;
   width: 100%;
+  border-bottom: #f2f2f2 solid 20px;
   align-items: center;
+
+}
+
+.para1 h1 {
+  font-size: 5rem;
 
 }
 
@@ -199,23 +182,67 @@ body {
   font-size: 1rem;
 }
 
+
+.para2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+}
+
+.para2 p {
+  font-size: 1.5rem;
+}
+
+.text2  {
+  width: 60%;
+}
+
+.text3 {
+  width: 30%;
+}
+
+.text3 p {
+  font-size: 1.9rem;
+}
+
 .lefto1 {
-  width: 40%;
+  width: 60%;
   height: auto;
   padding: 4rem 1.5rem;
   overflow: hidden;
   float: left;
+  flex-direction: column;
+  text-align: left;
 
 
 }
+
+
 
 .leftoimg {
   width: 40%;
   height: auto;
   padding: 4rem 1.5rem;
-  overflow: hidden;
   margin-left: 0;
   margin-right: auto;
+}
+
+.leftoimg2 {
+  max-width: 40%;
+  height: auto;
+  padding: 4rem 1.5rem;
+  margin-left: 0;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.leftoimg2 img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .lefto img {
@@ -227,7 +254,8 @@ body {
 
 .righto1 {
   padding: 4rem 1.5rem;
-  width: 50%;
+  padding-right: 6rem;
+  width: 40%;
   flex-direction: column;
   text-align: center;
   overflow: hidden;
@@ -236,6 +264,18 @@ body {
 
 
 }
+
+.righto1 p {
+  font-size: 1.9rem;
+
+}
+
+.righto1 h1 {
+  font-size: 3rem;
+
+}
+
+
 
 .rightoimg {
   padding: 4rem 1.5rem;
@@ -288,6 +328,8 @@ body {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  background-color: rgba(0,0,0,0.8);
+
 }
 
 /* Position the "next button" to the right */
@@ -298,7 +340,7 @@ body {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(145, 145, 145, 0.8);
 }
 
 /* Caption text */
