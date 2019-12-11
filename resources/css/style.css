@@ -16,7 +16,7 @@ body {
   margin: 0 auto;
   position: relative;
   top: 4rem;
-  font-family: sans-serif
+  font-family: sans-serif;
   color: #333333;
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 .main-content h4 {
-  font-size: 1.2rem
+  font-size: 1.2rem;
   color: white;
 }
 
@@ -52,7 +52,12 @@ body {
 .main-content .social {
   background-color: #388CCE;
   padding-bottom: 11rem;
+  
+}
 
+.main-content .social .para1 {
+  border-color: #1e3058;
+  
 }
 
 
@@ -76,6 +81,8 @@ body {
   padding-bottom: 11rem;
   background-color: antiquewhite;
 }
+
+
 
 
 
@@ -147,39 +154,7 @@ body {
 
 
 
-/* för läs sidor */
 
-.first{
-  display: flex;
-  width: 100%;
-  align-items: baseline;
-}
-
-.first p {
-  font-size: 1rem;
-}
-
-.first-image {
-  padding: 2rem 1.5rem;
-  width: 60vw;
-  overflow: hidden;
-}
-
-.first-image img{
-  display: block;
-  width: 100%;
-  height: auto;
-
-}
-
-.first-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.first-text #every, #consectetur {
-  padding-bottom: 1.5rem;
-}
 
 
 
@@ -193,25 +168,33 @@ body {
 
 }
 
+.para1 h1 {
+  font-size: 5rem;
+
+}
+
 .para1 p {
   font-size: 1rem;
 }
 
 .lefto1 {
-  width: 40%;
+  width: 60%;
   height: auto;
   padding: 4rem 1.5rem;
   overflow: hidden;
   float: left;
+  flex-direction: column;
+  text-align: left;
 
 
 }
+
+
 
 .leftoimg {
   width: 40%;
   height: auto;
   padding: 4rem 1.5rem;
-  overflow: hidden;
   margin-left: 0;
   margin-right: auto;
 }
@@ -225,13 +208,24 @@ body {
 
 .righto1 {
   padding: 4rem 1.5rem;
-  width: 50%;
+  padding-right: 6rem;
+  width: 40%;
   flex-direction: column;
   text-align: center;
   overflow: hidden;
   float: right;
 
 
+
+}
+
+.righto1 p {
+  font-size: 2.5rem;
+
+}
+
+.righto1 h1 {
+  font-size: 3rem;
 
 }
 
@@ -286,6 +280,8 @@ body {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  background-color: rgba(0,0,0,0.8);
+  
 }
 
 /* Position the "next button" to the right */
@@ -296,7 +292,7 @@ body {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(145, 145, 145, 0.8);
 }
 
 /* Caption text */
