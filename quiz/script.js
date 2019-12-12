@@ -62,8 +62,8 @@ function selectAnswer(e){
     if (shuffledQuestions.length > currentQuestionIndex +1){
         nextButton.classList.remove('hide')
     } else {
-        
-        startButton.innerText = 100*räknare/6+'% rätt'+'\n' +'Restart'
+        var answerspercent = 100*räknare/6
+        startButton.innerText = Math.round(answerspercent)+'% rätt'+'\n' +'Restart'
         startButton.classList.remove('hide')
         räknare=0
     }
@@ -125,6 +125,13 @@ const questions = [
           { text: 'Cirka 4 planeter', correct: true },
           { text: '3 planeter', correct: false},
           { text: 'Drygt 5 planeter', correct: false}
+        ]
+      },{
+        question: 'Transportsektorn är ett av de områden där sverige har störst möjlighet att utvecklas, varför?',
+        answers: [
+          { text: 'Svergie har det sämsta transportsystemet i hela Europa', correct: false },
+          { text: 'I svergie står transportsektorn för 13 procent av växthusgasutsläppen', correct: false },
+          { text: 'I svergie står Transportsektorn för 33 procent av växthusgasutsläppen', correct: true }
         ]
       }
 ]
