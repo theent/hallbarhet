@@ -51,26 +51,40 @@ body {
 .main-content .social {
   background-color: #388CCE;
   padding-bottom: 11rem;
-
 }
+<<<<<<< HEAD
 
 .main-content .social .para1, .main-content .social .para2  {
   border-color: #1DAA3C;
 }
 
+=======
+.main-content .social .para1, .main-content .social .para2{
+  border-color: #2B89D1;
+}
+>>>>>>> 4238d391679d738906abc976fa744aad3ff9dbc9
 .main-content .ekologisk {
-  background-color: #1DAA3C;
+  background-color: #0AA62C;
   padding-bottom: 11rem;
+}
+.main-content .ekologisk .para1, .main-content .ekologisk .para2{
+  border-color: #049C25;
 }
 
 .main-content .ekonomisk {
   background-color: #e67a00;
   padding-bottom: 11rem;
 }
+.main-content .ekonomisk .para1, .main-content .ekonomisk .para2{
+  border-color: #DF7600;
+}
 
 .main-content .generell {
   background-color: #1e3058;
   padding-bottom: 11rem;
+}
+.main-content .generell .para1, .main-content .generell .para2{
+  border-color: #1B2E59;
 }
 
 .main-content .huvud {
@@ -431,7 +445,7 @@ body {
     left: -400%;
   } */
   from {opacity: .4}
-  to {opacity: 1} 
+  to {opacity: 1}
 }
 
 @keyframes slide {
