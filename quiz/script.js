@@ -3,7 +3,7 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
-
+var räknare=0;
 let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click',startGame)
@@ -33,6 +33,7 @@ function showQuestion(question){
         button.classList.add('btn')
         if (answer.correct){
             button.dataset.correct = answer.correct
+            räknare++
         }
         button.addEventListener('click', selectAnswer)
         answerButtonsElement.appendChild(button)
@@ -58,8 +59,10 @@ function selectAnswer(e){
     if (shuffledQuestions.length > currentQuestionIndex +1){
         nextButton.classList.remove('hide')
     } else {
-        startButton.innerText = 'Restart'
+        
+        startButton.innerText = 'Restart  '+räknare+'/4 rätt'
         startButton.classList.remove('hide')
+        räknare=0
     }
 }
 
