@@ -62,7 +62,7 @@ function selectAnswer(e){
     if (shuffledQuestions.length > currentQuestionIndex +1){
         nextButton.classList.remove('hide')
     } else {
-        var answerspercent = 100*räknare/6
+        var answerspercent = 100*räknare/7
         startButton.innerText = Math.round(answerspercent)+'% rätt'+'\n' +'Restart'
         startButton.classList.remove('hide')
         räknare=0
