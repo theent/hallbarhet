@@ -94,9 +94,9 @@ const questions = [
     },{
         question: 'Vad är problemet med e-handel i Sverige?',
         answers: [
-          { text: 'Det finns för många chauförer som tävlar om att få anställning av e-handelsföretagen', correct: true },
+          { text: 'Det finns för många chauförer som tävlar om att få anställning av e-handelsföretagen', correct: false },
           { text: 'Det finns för få chaufförer och det finns en risk att varorna inte kommer ut i tid', correct: true },
-          { text: 'Det är för mycket trafik på vägarna och lasterna kommer inte fram', correct: true }
+          { text: 'Det är för mycket trafik på vägarna och lasterna kommer inte fram', correct: false }
         ]
       },{
         question: 'Hur många procent av de globala investeringarna i transportsektorn är riktade till “Developing Countries"?',
@@ -118,6 +118,13 @@ const questions = [
           { text: 'I och med att sektorn växer ohållbart som skapar enorma buller och hälsorelaterade problem för samhället', correct: false },
           { text: 'På grund av att transporterna är alldeles för långa som bidrar till ohälsosamma miljöer', correct: false},
           { text: 'Eftersom den är beroende av oljan som negativt påverkar hälsan och den är inte jämställd eftersom vissa personer kan påverka andras möjligheter', correct: true}
+        ]
+      },{
+        question: 'Hur många planeter skulle behövas om alla skulle ha samma standard som svenskarna enligt WWF?',
+        answers: [
+          { text: 'Cirka 4 planeter', correct: true },
+          { text: '3 planeter', correct: false},
+          { text: 'Drygt 5 planeter', correct: false}
         ]
       }
 ]
