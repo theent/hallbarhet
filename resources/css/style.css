@@ -4,32 +4,31 @@
 html {
   font-size: 16px;
   line-height: 1.4px;
-  font-family: 'Source Serif Pro', 'Solway', 'Helvetica', 'sans-serif';
+  font-family: 'Source Serif Pro', 'Solway', 'Helvetica', sans-serif;
 }
 
 body {
   max-width: 100%;
+  background-color: #add8e6;
 }
 
 .main-content{
   max-width: 100%;
-  margin: 0 auto;
   position: relative;
-  top: 4rem;
   font-family: sans-serif
   color: #333333;
 }
 
 .main-content h1 {
   font-size: 5rem;
-  font-family: Merriweather+Sans;
+  font-family: 'Source Serif Pro' , 'Solway', 'Helvetica', sans-serif;
   font-weight: 800;
   color: white;
 }
 
 .main-content h2 {
-  font-size: 1.75rem;
-  font-family: Merriweather+Sans;
+  font-size: 2.5rem;
+  font-family: 'Source Serif Pro' , 'Solway', 'Helvetica', sans-serif;
   font-weight: bold;
   color: white;
 }
@@ -52,14 +51,12 @@ body {
 .main-content .social {
   background-color: #388CCE;
   padding-bottom: 11rem;
-  border-color: #2F77B0;
 
 }
 
 .main-content .ekologisk {
   background-color: #1DAA3C;
   padding-bottom: 11rem;
-  border-color: #2F77B0;
 }
 
 .main-content .ekonomisk {
@@ -73,11 +70,8 @@ body {
 }
 
 .main-content .huvud {
-  padding-bottom: 11rem;
-  background-color: antiquewhite;
-}
-.main-content .social {
-  border-color: #2F77B0;
+  padding-bottom: 0.6rem;
+  background-color: #add8e6;
 }
 
 
@@ -87,16 +81,15 @@ body {
 
 .header {
   width: 100%;
-  height: 4rem;
+  height: 7%;
   display: flex;
   align-items: center;
   position: fixed;
   justify-content: space-between;
-  background-color: white;
+  background-color: #add8e6;
   z-index: 5;
-  border-bottom: lightgrey solid 0.5px;
   overflow: hidden;
-  font-family: sans-serif;
+  font-family: 'Source Serif Pro', 'Solway', 'Helvetica', sans-serif;
 }
 
 .header-left{
@@ -108,12 +101,12 @@ body {
 }
 
 .håll {
-  font-family: Hind;
+  font-family: 'Source Serif Pro' , 'Solway', 'Helvetica', sans-serif;
   font-weight: bold;
 }
 
 .alla {
-  font-family: Hind;
+  font-family: 'Source Serif Pro' , 'Solway', 'Helvetica', sans-serif;
 }
 
 .header img{
@@ -147,11 +140,8 @@ body {
 }
 
 
-
-
-
 /* för läs sidor */
-
+/*
 .first{
   display: flex;
   width: 100%;
@@ -184,57 +174,107 @@ body {
   padding-bottom: 1.5rem;
 }
 
-
+*/
 
 /* paragraf 1 */
 
 .para1 {
   display: flex;
+  padding-top: 1rem;
   width: 100%;
+  border-bottom: #f2f2f2 solid 20px;
   align-items: center;
+}
 
+.para1 h1 {
+  font-size: 5rem;
 }
 
 .para1 p {
   font-size: 1rem;
 }
 
+.para2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: #f2f2f2 solid 20px;
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+}
+
+.para2 p {
+  font-size: 1.5rem;
+}
+
+.text2  {
+  width: 60%;
+}
+
+.text3 {
+  width: 30%;
+}
+
+.text3 p {
+  font-size: 1.9rem;
+}
+
 .lefto1 {
-  width: 40%;
+  width: 60%;
   height: auto;
   padding: 4rem 1.5rem;
   overflow: hidden;
   float: left;
-
-
+  flex-direction: column;
+  text-align: left;
 }
 
 .leftoimg {
   width: 40%;
   height: auto;
   padding: 4rem 1.5rem;
-  overflow: hidden;
   margin-left: 0;
   margin-right: auto;
+}
+
+.leftoimg2 {
+  max-width: 40%;
+  height: auto;
+  padding: 4rem 1.5rem;
+  margin-left: 0;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.leftoimg2 img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .lefto img {
   display: block;
   width: 100%;
   height: 500px;
-
 }
 
 .righto1 {
   padding: 4rem 1.5rem;
-  width: 50%;
+  padding-right: 6rem;
+  width: 40%;
   flex-direction: column;
   text-align: center;
   overflow: hidden;
   float: right;
+}
 
+.righto1 p {
+  font-size: 1.9rem;
+}
 
-
+.righto1 h1 {
+  font-size: 3rem;
 }
 
 .rightoimg {
@@ -245,8 +285,6 @@ body {
   overflow: hidden;
   margin-left: auto;
   margin-right: 0;
-
-
 }
 
 .mittenbild {
@@ -257,15 +295,15 @@ body {
 }
 
 
-
 * {box-sizing:border-box}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 70%;
+  max-width: 100%;
+  height: auto;
   position: relative;
   margin: auto;
-  padding-top: 5%;
+  overflow: hidden;
 }
 
 /* Hide the images by default */
@@ -317,7 +355,7 @@ body {
   font-size: 15px;
   padding: 20px 12px;
   position: absolute;
-  bottom: 25%;
+  bottom: 27%;
   width: 100%;
   text-align: center;
 }
@@ -353,18 +391,45 @@ body {
 
 /* Fading animation */
 .fade {
-  -webkit-animation-name: fade;
+  -webkit-animation-name: slide;
   -webkit-animation-duration: 1.5s;
-  animation-name: fade;
+  animation-name: slide;
   animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fade {
+@-webkit-keyframes slide {
+  /* 0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  } */
   from {opacity: .4}
-  to {opacity: 1}
+  to {opacity: 1} 
 }
 
-@keyframes fade {
+@keyframes slide {
   from {opacity: .4}
   to {opacity: 1}
 }
@@ -374,11 +439,11 @@ body {
 
 .main-content footer {
   width: 100%;
-  height: 160px;
-  background-color: rgb(250, 250, 250);
+  height: 2%;
+  background-color: #add8e6;
   margin: auto;
-  font-family: Verdana;
-  font-size: 12px;
+  font-family: 'Source Serif Pro', 'Solway', 'Helvetica', sans-serif;
+  font-size: 16px;
 position: absolute;
 top: 100%;
 display: flex;
