@@ -54,6 +54,10 @@ body {
 
 }
 
+.main-content .social .para1, .main-content .social .para2  {
+  border-color: #1DAA3C;
+}
+
 .main-content .ekologisk {
   background-color: #1DAA3C;
   padding-bottom: 11rem;
@@ -73,6 +77,7 @@ body {
   padding-bottom: 0.6rem;
   background-color: #add8e6;
 }
+
 
 
 
