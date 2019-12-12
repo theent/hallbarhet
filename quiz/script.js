@@ -63,7 +63,7 @@ function selectAnswer(e){
         nextButton.classList.remove('hide')
     } else {
         
-        startButton.innerText = 100*räknare/5+'% rätt'+'\n' +'Restart'
+        startButton.innerText = 100*räknare/6+'% rätt'+'\n' +'Restart'
         startButton.classList.remove('hide')
         räknare=0
     }
