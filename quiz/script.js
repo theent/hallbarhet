@@ -33,7 +33,6 @@ function showQuestion(question){
         button.classList.add('btn')
         if (answer.correct){
             button.dataset.correct = answer.correct
-            räknare++
         }
         button.addEventListener('click', selectAnswer)
         answerButtonsElement.appendChild(button)
@@ -56,11 +55,15 @@ function selectAnswer(e){
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
+    //om vald knapp är korrekt ökas räknaren med 1
+    if (selectedButton.dataset.correct){
+        räknare++
+    }
     if (shuffledQuestions.length > currentQuestionIndex +1){
         nextButton.classList.remove('hide')
     } else {
         
-        startButton.innerText = 'Restart  '+räknare+'/4 rätt'
+        startButton.innerText = 'Restart  '+100*räknare/5+'% rätt'
         startButton.classList.remove('hide')
         räknare=0
     }
@@ -82,35 +85,39 @@ function clearStatusClass(element){
 
 const questions = [
     {
-        question: 'Vilken är den bästa gruppen?',
+        question: 'Vad är Grön tillväxt?',
         answers: [
-            { text: 'vi', correct: true },
-            { text: 'någon annan grupp', correct: false}
+            { text: 'Tillväxt inom den ekonomiska sektorn som handlar om hållbar teknologi', correct: false },
+            { text: 'Hållbar ekonomisk tillväxt som inte “bryr sig om” social och ekologisk hållbarhet', correct: true},
+            { text: 'Ekonomisk tillväxt som inte gör det värre för social och ekologisk hållbarhet', correct: false }
         ]
     },{
-        question: 'vem är bäst på att dricka sprit?',
+        question: 'Vad är problemet med e-handel i Sverige?',
         answers: [
-          { text: 'Oscar', correct: true },
-          { text: 'Jonas', correct: true },
-          { text: 'Oscar2', correct: true },
-          { text: 'Hala', correct: true },
-          { text: 'Max', correct: true },
-          { text: 'Christoffer', correct: true },
-          { text: 'Calle', correct: true }
+          { text: 'Det finns för många chauförer som tävlar om att få anställning av e-handelsföretagen', correct: true },
+          { text: 'Det finns för få chaufförer och det finns en risk att varorna inte kommer ut i tid', correct: true },
+          { text: 'Det är för mycket trafik på vägarna och lasterna kommer inte fram', correct: true }
         ]
       },{
-        question: 'Vem blev årets nolla?',
+        question: 'Hur många procent av de globala investeringarna i transportsektorn är riktade till “Developing Countries"?',
         answers: [
-          { text: 'Calle', correct: true },
-          { text: 'Oscar', correct: false },
-          { text: 'någon annan', correct: false }
+          { text: '20%', correct: false },
+          { text: '40%', correct: true },
+          { text: '80%', correct: false }
         ]
       },{
-        question: 'Vem drack josagrogg i fredags?',
+        question: 'Vilka tre dimensioner vägs samman och observeras i HDI?',
         answers: [
-          { text: 'Oscar', correct: true },
-          { text: 'Oscar2', correct: true},
-          { text: 'någon annan i gruppen', correct: false}
+          { text: 'Uppskattad Konsumtion, hälsa och utsläpp', correct: false },
+          { text: 'Förväntad livslängd, förväntad utbildningslängd och välfärd', correct: true},
+          { text: 'Livskvalitet, hälsa och jämställdhet', correct: false}
+        ]
+      },{
+        question: 'Varför är dagens transportsektor inte socialt hållbar?',
+        answers: [
+          { text: 'I och med att sektorn växer ohållbart som skapar enorma buller och hälsorelaterade problem för samhället', correct: false },
+          { text: 'På grund av att transporterna är alldeles för långa som bidrar till ohälsosamma miljöer', correct: false},
+          { text: 'Eftersom den är beroende av oljan som negativt påverkar hälsan och den är inte jämställd eftersom vissa personer kan påverka andras möjligheter', correct: true}
         ]
       }
 ]
