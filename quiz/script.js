@@ -1,4 +1,5 @@
 const startButton = document.getElementById('start-btn')
+const backButton = document.getElementById('back-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
@@ -6,14 +7,18 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 var räknare=0;
 let shuffledQuestions, currentQuestionIndex
 
+backButton.addEventListener('click',endGame)
 startButton.addEventListener('click',startGame)
 nextButton.addEventListener('click', ()=> {
     currentQuestionIndex++
     setNextQuestion()
 })
-
+function endGame(){
+  location.href = 'index.html'
+}
 function startGame(){
 startButton.classList.add('hide')
+backButton.classList.add('hide')
 shuffledQuestions=questions.sort(() => Math.random() - .5)
 currentQuestionIndex = 0
 questionContainerElement.classList.remove('hide')
@@ -65,6 +70,8 @@ function selectAnswer(e){
         var answerspercent = 100*räknare/7
         startButton.innerText = Math.round(answerspercent)+'% rätt'+'\n' +'Restart'
         startButton.classList.remove('hide')
+        backButton.classList.remove('hide')
+        backButton.innerText = "Tillbaks till startsidan"
         räknare=0
     }
 }
@@ -130,8 +137,8 @@ const questions = [
         question: 'Transportsektorn är ett av de områden där sverige har störst möjlighet att utvecklas, varför?',
         answers: [
           { text: 'Svergie har det sämsta transportsystemet i hela Europa', correct: false },
-          { text: 'I svergie står transportsektorn för 13 procent av växthusgasutsläppen', correct: false },
-          { text: 'I svergie står Transportsektorn för 33 procent av växthusgasutsläppen', correct: true }
+          { text: 'I Svergie står transportsektorn för 13 procent av växthusgasutsläppen', correct: false },
+          { text: 'I Svergie står Transportsektorn för 33 procent av växthusgasutsläppen', correct: true }
         ]
       }
 ]
